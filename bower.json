@@ -1,0 +1,38 @@
+{
+  "name": "mrkd",
+  "version": "0.0.0",
+  "description": "Checks if entity is marked by unique symbol.",
+  "main": "mrkd.deploy.js",
+  "support": "mrkd.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "check",
+    "entity",
+    "marked",
+    "unique",
+    "symbol",
+    "mrkd"
+  ],
+  "homepage": "https://github.com/volkovasystems/mrkd",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "kein": "^0.19.0"
+  },
+  "dependencies": {
+    "depher": "^0.28.0",
+    "falzy": "^0.19.0",
+    "kein": "^0.19.0",
+    "protype": "^0.21.0",
+    "raze": "^0.27.0",
+    "zelf": "^0.11.0"
+  }
+}
