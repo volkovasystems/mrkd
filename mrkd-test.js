@@ -1,19 +1,21 @@
-
+const assert = require( "assert" );
 const mrkd = require( "./mrkd.js" );
 
 let x = { };
 x[ Symbol( "hello" ) ] = "yeah";
 
-console.log( mrkd( "hello", x ) );
+assert.equal( mrkd( "hello", x ), true, "should be true" );
 
 let test = Symbol( "test" );
 x[ test ] = "world";
 
-console.log( mrkd( "test", x ) );
-console.log( mrkd( "test", x, true ) );
+assert.equal( mrkd( "test", x ), true, "should be true" );
+assert.equal( mrkd( "test", x, true ), false, "should be false" );
 
 let test2 = Symbol( "test2" );
 x[ test2 ] = test2;
 
-console.log( mrkd( test2, x, true ) );
-console.log( mrkd( test2, x ) );
+assert.equal( mrkd( test2, x, true ), true, "should be true" );
+assert.equal( mrkd( test2, x ), true, "should be true" );
+
+console.log( "ok" );
