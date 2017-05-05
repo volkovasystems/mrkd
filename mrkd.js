@@ -53,6 +53,7 @@
 			"depher": "depher",
 			"falzy": "falzy",
 			"kein": "kein",
+			"mtch": "mtch",
 			"protype": "protype",
 			"raze": "raze",
 			"zelf": "zelf"
@@ -63,6 +64,7 @@
 const depher = require( "depher" );
 const falzy = require( "falzy" );
 const kein =  require( "kein" );
+const mtch = require( "mtch" );
 const protype = require( "protype" );
 const raze = require( "raze" );
 const zelf = require( "zelf" );
@@ -90,7 +92,7 @@ const mrkd = function mrkd( marker, entity, strict ){
 	let mark = marker;
 	if( protype( marker, SYMBOL ) ){
 		//: @note: Just use toString here.
-		mark = marker.toString( ).match( SYMBOL_PATTERN )[ 1 ];
+		mark = mtch( marker.toString( ), SYMBOL_PATTERN, 1 );
 	}
 
 	/*;
@@ -113,7 +115,7 @@ const mrkd = function mrkd( marker, entity, strict ){
 
 	//: @note: Just use toString here.
 	return ( kein( marker, entity ) || Object.getOwnPropertySymbols( entity )
-		.map( ( symbol ) => symbol.toString( ).match( SYMBOL_PATTERN )[ 1 ] )
+		.map( ( symbol ) => mtch( symbol.toString( ), SYMBOL_PATTERN, 1 ) )
 		.some( ( symbol ) => ( symbol == mark ) ) );
 };
 

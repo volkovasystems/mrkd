@@ -53,6 +53,7 @@
                                                                                                                                                                                                                                                                                                                                                                                       			"depher": "depher",
                                                                                                                                                                                                                                                                                                                                                                                       			"falzy": "falzy",
                                                                                                                                                                                                                                                                                                                                                                                       			"kein": "kein",
+                                                                                                                                                                                                                                                                                                                                                                                      			"mtch": "mtch",
                                                                                                                                                                                                                                                                                                                                                                                       			"protype": "protype",
                                                                                                                                                                                                                                                                                                                                                                                       			"raze": "raze",
                                                                                                                                                                                                                                                                                                                                                                                       			"zelf": "zelf"
@@ -63,6 +64,7 @@
 var depher = require("depher");
 var falzy = require("falzy");
 var kein = require("kein");
+var mtch = require("mtch");
 var protype = require("protype");
 var raze = require("raze");
 var zelf = require("zelf");
@@ -90,7 +92,7 @@ var mrkd = function mrkd(marker, entity, strict) {
 	var mark = marker;
 	if (protype(marker, SYMBOL)) {
 		//: @note: Just use toString here.
-		mark = marker.toString().match(SYMBOL_PATTERN)[1];
+		mark = mtch(marker.toString(), SYMBOL_PATTERN, 1);
 	}
 
 	/*;
@@ -113,7 +115,7 @@ var mrkd = function mrkd(marker, entity, strict) {
 
 	//: @note: Just use toString here.
 	return kein(marker, entity) || (0, _getOwnPropertySymbols2.default)(entity).
-	map(function (symbol) {return symbol.toString().match(SYMBOL_PATTERN)[1];}).
+	map(function (symbol) {return mtch(symbol.toString(), SYMBOL_PATTERN, 1);}).
 	some(function (symbol) {return symbol == mark;});
 };
 
