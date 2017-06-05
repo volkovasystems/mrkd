@@ -3,9 +3,9 @@ babel-runtime \
 depher \
 falzy \
 kein \
-mtch \
 protype \
 raze \
+xcavate \
 zelf \
 --save && \
 yarn add \
@@ -20,9 +20,9 @@ bower install \
 depher \
 falzy \
 kein \
-mtch \
 protype \
 raze \
+xcavate \
 zelf \
 --save \
 --force-latest

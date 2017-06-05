@@ -56,6 +56,7 @@
 			"mtch": "mtch",
 			"protype": "protype",
 			"raze": "raze",
+			"xcavate": "xcavate",
 			"zelf": "zelf"
 		}
 	@end-include
@@ -64,9 +65,9 @@
 const depher = require( "depher" );
 const falzy = require( "falzy" );
 const kein =  require( "kein" );
-const mtch = require( "mtch" );
 const protype = require( "protype" );
 const raze = require( "raze" );
+const xcavate = require( "xcavate" );
 const zelf = require( "zelf" );
 
 const SYMBOL_PATTERN = /^Symbol\((.+?)\)$/;
@@ -76,6 +77,7 @@ const mrkd = function mrkd( marker, entity, strict ){
 		@meta-configuration:
 			{
 				"marker:required": [
+					"number",
 					"string",
 					"symbol"
 				],
@@ -85,24 +87,11 @@ const mrkd = function mrkd( marker, entity, strict ){
 		@end-meta-configuration
 	*/
 
-	if( falzy( marker ) || !protype( marker, SYMBOL + STRING ) ){
+	if( falzy( marker ) || !protype( marker, NUMBER + SYMBOL + STRING ) ){
 		throw new Error( "invalid marker" );
 	}
 
-	let mark = marker;
-	if( protype( marker, SYMBOL ) ){
-		//: @note: Just use toString here.
-		mark = mtch( marker.toString( ), SYMBOL_PATTERN, 1 );
-	}
-
-	/*;
-		@note:
-			If given marker is a string this will use the global context of symbol.
-		@end-note
-	*/
-	if( protype( marker, STRING ) ){
-		marker = Symbol.for( marker );
-	}
+	marker = xcavate( marker, entity );
 
 	let parameter = raze( arguments );
 	entity = depher( parameter, [ FUNCTION, OBJECT ], zelf( this ) );
@@ -113,10 +102,7 @@ const mrkd = function mrkd( marker, entity, strict ){
 		return kein( marker, entity ) && ( entity[ marker ] === marker );
 	}
 
-	//: @note: Just use toString here.
-	return ( kein( marker, entity ) || Object.getOwnPropertySymbols( entity )
-		.map( ( symbol ) => mtch( symbol.toString( ), SYMBOL_PATTERN, 1 ) )
-		.some( ( symbol ) => ( symbol == mark ) ) );
+	return kein( marker, entity );
 };
 
 module.exports = mrkd;
