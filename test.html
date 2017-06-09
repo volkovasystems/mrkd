@@ -1,8 +1,38 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<script
-			type="application/javascript"
-			src="./mrkd.deploy.js">
-		</script>
-	</head>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Mrkd QUnit Example</title>
+	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+	<script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+	<script type="application/javascript" src="./mrkd.deploy.js"></script>
+</head>
+
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+	<script>
+		QUnit.test("equal test", function (assert) {
+			let x = {};
+			x[Symbol("hello")] = "yeah";
+
+			assert.equal(mrkd("hello", x), true, "should be true");
+
+			let test = Symbol("test");
+			x[test] = "world";
+
+			assert.equal(mrkd("test", x), true, "should be true");
+			assert.equal(mrkd("test", x, true), false, "should be false");
+
+			let test2 = Symbol("test2");
+			x[test2] = test2;
+
+			assert.equal(mrkd(test2, x, true), true, "should be true");
+			assert.equal(mrkd(test2, x), true, "should be true");
+		});
+	</script>
+</body>
+
 </html>
