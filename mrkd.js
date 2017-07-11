@@ -32,11 +32,11 @@
 			"file": "mrkd.js",
 			"module": "mrkd",
 			"author": "Richeve S. Bebedor",
+			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
 				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
 				"Vinse Vinalon <vinsevinalon@gmail.com>"
 			],
-			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/mrkd.git",
 			"test": "mrkd-test.js",
 			"global": true
