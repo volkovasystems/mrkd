@@ -1,6 +1,6 @@
 {
   "name": "mrkd",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Checks if entity is marked by unique symbol.",
   "main": "mrkd.deploy.js",
   "support": "mrkd.support.js",
@@ -29,7 +29,7 @@
   "dependencies": {
     "depher": "^0.38.0",
     "falzy": "^0.23.0",
-    "kein": "^0.29.0",
+    "kein": "^0.30.0",
     "protype": "^0.24.0",
     "raze": "^0.34.0",
     "xcavate": "^0.4.0",
