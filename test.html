@@ -35,6 +35,11 @@
 				assert.equal( mrkd( test2, x, true ), true, "should be equal to true" );
 				assert.equal( mrkd( test2, x ), true, "should be equal to true" );
 
+				let Hello = function Hello( ){ };
+				Hello[ Symbol.for( "extensive" ) ] = Symbol.for( "extensive" );
+
+				assert.equal( mrkd( Symbol.for( "extensive" ), Hello ), true, "should be equal to true" );
+
 			} );
 		</script>
 	</body>
