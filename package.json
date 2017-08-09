@@ -1,56 +1,56 @@
 {
-  "name": "mrkd",
-  "version": "0.10.0",
-  "description": "Checks if entity is marked by unique symbol.",
-  "main": "mrkd.js",
-  "support": "mrkd.support.js",
-  "deploy": "mrkd.deploy.js",
-  "browser": "mrkd.deploy.js",
-  "scripts": {
-	"pristine": "rsetmod clean && flxc execute ./.install.sh",
-	"clear": "rsetmod clean --clear",
-	"build": "babel mrkd.js --out-file mrkd.support.js --source-maps && webpack --progress --display-modules",
-	"pretest": "npm run clear && npm run build",
-	"test": "node mrkd-test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovasystems/mrkd.git"
-  },
-  "keywords": [
-    "check",
-    "entity",
-    "marked",
-    "unique",
-    "symbol",
-    "mrkd"
-  ],
-  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-  "contributors": [
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volkovasystems/mrkd/issues"
-  },
-  "homepage": "https://github.com/volkovasystems/mrkd#readme",
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "depher": "^0.36.0",
-    "falzy": "^0.20.0",
-    "kein": "^0.28.0",
-    "protype": "^0.22.0",
-    "raze": "^0.33.0",
-    "xcavate": "^0.2.0",
-    "zelf": "^0.12.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.1.0"
-  }
+	"name": "mrkd",
+	"version": "0.10.0",
+	"description": "Checks if entity is marked by unique symbol.",
+	"main": "mrkd.js",
+	"support": "mrkd.support.js",
+	"deploy": "mrkd.deploy.js",
+	"browser": "mrkd.deploy.js",
+	"scripts": {
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
+		"build": "babel mrkd.js --out-file mrkd.support.js --source-maps && webpack --progress --display-modules",
+		"pretest": "npm run clear && npm run build",
+		"test": "node mrkd-test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/mrkd.git"
+	},
+	"keywords": [
+		"check",
+		"entity",
+		"marked",
+		"unique",
+		"symbol",
+		"mrkd"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/mrkd/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/mrkd#readme",
+	"dependencies": {
+		"babel-runtime": "^6.25.0",
+		"depher": "^0.38.0",
+		"falzy": "^0.23.0",
+		"kein": "^0.29.0",
+		"protype": "^0.24.0",
+		"raze": "^0.34.0",
+		"xcavate": "^0.4.0",
+		"zelf": "^0.14.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.24.1",
+		"source-map-loader": "^0.2.1",
+		"webpack": "^3.5.1"
+	}
 }
