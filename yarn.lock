@@ -1844,9 +1844,9 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-kein@^0.29.0:
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/kein/-/kein-0.29.0.tgz#8b0d233e095edfbf2c29250b5ed6e7b3fd1fb67d"
+kein@^0.30.0:
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/kein/-/kein-0.30.0.tgz#4836193d902167fd9c6ee6572b12c36f550cc00b"
   dependencies:
     babel-runtime "^6.25.0"
     falzy "^0.23.0"
@@ -2990,9 +2990,9 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
 
-webpack@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.5.1.tgz#b749ee3d2b5a118dad53e8e41585b3f71e75499a"
+webpack@^3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.5.3.tgz#e68653963bda146e212832c04a4d8041d2b4b8c8"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
