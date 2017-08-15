@@ -1,41 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>mrkd unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:mrkd</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./mrkd.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "mrkd unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				let x = { };
-				x[ Symbol( "hello" ) ] = "yeah";
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				assert.equal( mrkd( "hello", x ), true, "should be true" );
-
-				let test = Symbol( "test" );
-				x[ test ] = "world";
-
-				assert.equal( mrkd( "test", x ), true, "should be true" );
-				assert.equal( mrkd( "test", x, true ), false, "should be false" );
-
-				let test2 = Symbol( "test2" );
-				x[ test2 ] = test2;
-
-				assert.equal( mrkd( test2, x, true ), true, "should be true" );
-				assert.equal( mrkd( test2, x ), true, "should be true" );
-				
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
