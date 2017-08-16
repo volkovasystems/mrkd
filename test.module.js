@@ -233,6 +233,29 @@ describe( "mrkd", ( ) => {
 //: @bridge:
 
 describe( "mrkd", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`mrkd( 'hello', { [ Symbol( 'hello' ) ]: 'yeah' } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let x = { };
+					x[ Symbol( "hello" ) ] = "yeah";
+					return mrkd( "hello", x );
+
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
