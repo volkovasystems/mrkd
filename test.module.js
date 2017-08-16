@@ -307,6 +307,62 @@ describe( "mrkd", ( ) => {
 		} );
 	} );
 
+	describe( "`mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let x = { };
+					x[ Symbol( "hello" ) ] = "yeah";
+
+					let test = Symbol( "test" );
+					x[ test ] = "world";
+
+					let test2 = Symbol( "test2" );
+					x[ test2 ] = test2;
+
+					return mrkd( test2, x );
+
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
+
+		} );
+	} );
+
+	describe( "`mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) }, true )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let x = { };
+					x[ Symbol( "hello" ) ] = "yeah";
+
+					let test = Symbol( "test" );
+					x[ test ] = "world";
+
+					let test2 = Symbol( "test2" );
+					x[ test2 ] = test2;
+
+					return mrkd( test2, x, true );
+
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
