@@ -281,6 +281,32 @@ describe( "mrkd", ( ) => {
 		} );
 	} );
 
+	describe( "`mrkd( 'test', { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world' }, true )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let x = { };
+					x[ Symbol( "hello" ) ] = "yeah";
+
+					let test = Symbol( "test" );
+					x[ test ] = "world";
+
+					return mrkd( "test", x, true );
+
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, false );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
