@@ -1,0 +1,212 @@
+{
+	"state": {
+		"passed": 5,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-16T10:25:18.215Z",
+	"end": "2017-08-16T10:26:05.798Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "mrkd",
+			"duration": 0,
+			"start": "2017-08-16T10:26:05.329Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "mrkd",
+			"duration": 295,
+			"start": "2017-08-16T10:26:05.329Z",
+			"end": "2017-08-16T10:26:05.624Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-16T10:26:05.330Z",
+					"end": "2017-08-16T10:26:05.331Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-16T10:26:05.433Z",
+					"end": "2017-08-16T10:26:05.434Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-16T10:26:05.435Z",
+					"end": "2017-08-16T10:26:05.435Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-16T10:26:05.501Z",
+					"end": "2017-08-16T10:26:05.501Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-16T10:26:05.501Z",
+					"end": "2017-08-16T10:26:05.501Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-16T10:26:05.541Z",
+					"end": "2017-08-16T10:26:05.541Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-16T10:26:05.542Z",
+					"end": "2017-08-16T10:26:05.542Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-16T10:26:05.582Z",
+					"end": "2017-08-16T10:26:05.582Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-16T10:26:05.582Z",
+					"end": "2017-08-16T10:26:05.582Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-16T10:26:05.623Z",
+					"end": "2017-08-16T10:26:05.624Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "mrkd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-16T10:26:05.624Z",
+					"end": "2017-08-16T10:26:05.624Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "mrkd"
+				}
+			]
+		},
+		{
+			"name": "`mrkd( 'hello', { [ Symbol( 'hello' ) ]: 'yeah' } )`",
+			"duration": 104,
+			"start": "2017-08-16T10:26:05.330Z",
+			"end": "2017-08-16T10:26:05.434Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-16T10:26:05.330Z",
+					"end": "2017-08-16T10:26:05.433Z",
+					"duration": 103,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`mrkd( 'test', { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world' } )`",
+			"duration": 66,
+			"start": "2017-08-16T10:26:05.435Z",
+			"end": "2017-08-16T10:26:05.501Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-16T10:26:05.435Z",
+					"end": "2017-08-16T10:26:05.501Z",
+					"duration": 66,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`mrkd( 'test', { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world' }, true )`",
+			"duration": 40,
+			"start": "2017-08-16T10:26:05.501Z",
+			"end": "2017-08-16T10:26:05.541Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-08-16T10:26:05.501Z",
+					"end": "2017-08-16T10:26:05.541Z",
+					"duration": 40,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) } )`",
+			"duration": 41,
+			"start": "2017-08-16T10:26:05.541Z",
+			"end": "2017-08-16T10:26:05.582Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-16T10:26:05.542Z",
+					"end": "2017-08-16T10:26:05.582Z",
+					"duration": 40,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) }, true )`",
+			"duration": 42,
+			"start": "2017-08-16T10:26:05.582Z",
+			"end": "2017-08-16T10:26:05.624Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-16T10:26:05.582Z",
+					"end": "2017-08-16T10:26:05.623Z",
+					"duration": 41,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
