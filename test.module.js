@@ -70,6 +70,79 @@ const path = require( "path" );
 
 describe( "mrkd", ( ) => {
 
+	describe( "`mrkd( 'hello', { [ Symbol( 'hello' ) ]: 'yeah' } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			assert.equal( mrkd( "hello", x ), true );
+
+		} );
+	} );
+
+	describe( "`mrkd( 'test', { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world' } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			let test = Symbol( "test" );
+			x[ test ] = "world";
+
+			assert.equal( mrkd( "test", x ), true );
+
+		} );
+	} );
+
+	describe( "`mrkd( 'test', { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world' }, true )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			let test = Symbol( "test" );
+			x[ test ] = "world";
+
+			assert.equal( mrkd( "test", x, true ), false );
+
+		} );
+	} );
+
+	describe( "`mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			let test = Symbol( "test" );
+			x[ test ] = "world";
+
+			let test2 = Symbol( "test2" );
+			x[ test2 ] = test2;
+
+			assert.equal( mrkd( test2, x ), true );
+
+		} );
+	} );
+
+	describe( "`mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) }, true )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			let test = Symbol( "test" );
+			x[ test ] = "world";
+
+			let test2 = Symbol( "test2" );
+			x[ test2 ] = test2;
+
+			assert.equal( mrkd( test2, x, true ), true );
+
+		} );
+	} );
+
 } );
 
 //: @end-server
@@ -78,6 +151,80 @@ describe( "mrkd", ( ) => {
 //: @client:
 
 describe( "mrkd", ( ) => {
+
+	describe( "`mrkd( 'hello', { [ Symbol( 'hello' ) ]: 'yeah' } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			assert.equal( mrkd( "hello", x ), true );
+
+		} );
+	} );
+
+	describe( "`mrkd( 'test', { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world' } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			let test = Symbol( "test" );
+			x[ test ] = "world";
+
+			assert.equal( mrkd( "test", x ), true );
+
+		} );
+	} );
+
+	describe( "`mrkd( 'test', { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world' }, true )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			let test = Symbol( "test" );
+			x[ test ] = "world";
+
+			assert.equal( mrkd( "test", x, true ), false );
+
+		} );
+	} );
+
+	describe( "`mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			let test = Symbol( "test" );
+			x[ test ] = "world";
+
+			let test2 = Symbol( "test2" );
+			x[ test2 ] = test2;
+
+			assert.equal( mrkd( test2, x ), true );
+
+		} );
+	} );
+
+	describe( "`mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) }, true )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let x = { };
+			x[ Symbol( "hello" ) ] = "yeah";
+
+			let test = Symbol( "test" );
+			x[ test ] = "world";
+
+			let test2 = Symbol( "test2" );
+			x[ test2 ] = test2;
+
+			assert.equal( mrkd( test2, x, true ), true );
+
+		} );
+	} );
+
 } );
 
 //: @end-client
