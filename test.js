@@ -139,6 +139,17 @@ describe( "mrkd", ( ) => {
 		} );
 	} );
 
+	describe( "`mrkd with symbol type marker and function type entity`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let Hello = function Hello( ){ };
+			Hello[ Symbol.for( "extensive" ) ] = Symbol.for( "extensive" );
+
+			assert.equal( mrkd( Symbol.for( "extensive" ), Hello ), true );
+
+		} );
+	} );
+
 } );
 
 //: @end-server

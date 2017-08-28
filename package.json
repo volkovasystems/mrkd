@@ -48,7 +48,7 @@
 	},
 	"homepage": "https://github.com/volkovasystems/mrkd#readme",
 	"dependencies": {
-		"babel-runtime": "^6.25.0",
+		"babel-runtime": "^6.26.0",
 		"depher": "^0.38.0",
 		"falzy": "^0.23.0",
 		"kein": "^0.30.0",
@@ -58,8 +58,8 @@
 		"zelf": "^0.14.0"
 	},
 	"devDependencies": {
-		"babel-cli": "^6.24.1",
-		"babel-core": "^6.25.0",
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-latest": "^6.24.1",
 		"electron": "^1.7.5",
@@ -70,7 +70,7 @@
 		"gulp-plumber": "^1.1.0",
 		"gulp-rename": "^1.2.2",
 		"gulp-replace": "^0.6.1",
-		"gulp-sourcemaps": "^2.6.0",
+		"gulp-sourcemaps": "^2.6.1",
 		"mocha": "^3.5.0",
 		"should": "^11.2.1",
 		"source-map-loader": "^0.2.1",
@@ -78,7 +78,7 @@
 		"wdio-mocha-framework": "^0.5.11",
 		"wdio-selenium-standalone-service": "^0.0.9",
 		"webdriverio": "^4.8.0",
-		"webpack": "^3.5.4",
+		"webpack": "^3.5.5",
 		"yargs": "^8.0.2"
 	}
 }

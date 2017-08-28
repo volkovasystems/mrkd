@@ -1,13 +1,13 @@
 {
 	"stats": {
-		"suites": 6,
-		"tests": 5,
-		"passes": 5,
+		"suites": 7,
+		"tests": 6,
+		"passes": 6,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-08-16T10:25:17.127Z",
-		"end": "2017-08-16T10:25:17.136Z",
-		"duration": 9
+		"start": "2017-08-28T09:24:07.199Z",
+		"end": "2017-08-28T09:24:07.209Z",
+		"duration": 10
 	},
 	"tests": [
 		{
@@ -20,7 +20,7 @@
 		{
 			"title": "should be equal to true",
 			"fullTitle": "mrkd `mrkd( 'test', { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world' } )` should be equal to true",
-			"duration": 0,
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -34,13 +34,20 @@
 		{
 			"title": "should be equal to true",
 			"fullTitle": "mrkd `mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) } )` should be equal to true",
-			"duration": 0,
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
 			"title": "should be equal to true",
 			"fullTitle": "mrkd `mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) }, true )` should be equal to true",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "mrkd `mrkd with symbol type marker and function type entity` should be equal to true",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
@@ -59,7 +66,7 @@
 		{
 			"title": "should be equal to true",
 			"fullTitle": "mrkd `mrkd( 'test', { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world' } )` should be equal to true",
-			"duration": 0,
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -73,13 +80,20 @@
 		{
 			"title": "should be equal to true",
 			"fullTitle": "mrkd `mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) } )` should be equal to true",
-			"duration": 0,
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
 			"title": "should be equal to true",
 			"fullTitle": "mrkd `mrkd( Symbol( 'test2' ), { [ Symbol( 'hello' ) ]: 'yeah', [ Symbol( 'test' ) ]: 'world', [ Symbol( 'test2' ) ]: Symbol( 'test2' ) }, true )` should be equal to true",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "mrkd `mrkd with symbol type marker and function type entity` should be equal to true",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}

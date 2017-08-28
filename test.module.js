@@ -143,6 +143,17 @@ describe( "mrkd", ( ) => {
 		} );
 	} );
 
+	describe( "`mrkd with symbol type marker and function type entity`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let Hello = function Hello( ){ };
+			Hello[ Symbol.for( "extensive" ) ] = Symbol.for( "extensive" );
+
+			assert.equal( mrkd( Symbol.for( "extensive" ), Hello ), true );
+
+		} );
+	} );
+
 } );
 
 //: @end-server
@@ -221,6 +232,17 @@ describe( "mrkd", ( ) => {
 			x[ test2 ] = test2;
 
 			assert.equal( mrkd( test2, x, true ), true );
+
+		} );
+	} );
+
+	describe( "`mrkd with symbol type marker and function type entity`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let Hello = function Hello( ){ };
+			Hello[ Symbol.for( "extensive" ) ] = Symbol.for( "extensive" );
+
+			assert.equal( mrkd( Symbol.for( "extensive" ), Hello ), true );
 
 		} );
 	} );
@@ -353,6 +375,27 @@ describe( "mrkd", ( ) => {
 					x[ test2 ] = test2;
 
 					return mrkd( test2, x, true );
+
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
+
+		} );
+	} );
+
+	describe( "`mrkd with symbol type marker and function type entity`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let Hello = function Hello( ){ };
+					Hello[ Symbol.for( "extensive" ) ] = Symbol.for( "extensive" );
+
+					return mrkd( Symbol.for( "extensive" ), Hello );
 
 				}
 
